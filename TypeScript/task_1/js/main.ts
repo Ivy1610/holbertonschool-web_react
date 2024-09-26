@@ -10,6 +10,10 @@ interface Teacher {
     [propName: string]: any;
   }
   
+  interface Directors extends Teacher {
+    numberOfReports: number;
+  }
+
   // Example usage of the Teacher interface
   const teacher3: Teacher = {
     firstName: 'John',
@@ -28,4 +32,24 @@ interface Teacher {
   // fullTimeEmployee: false
   // lastName: "Doe"
   // location: "London"
+  
+
+  // Example usage of the Directors interface
+  const director1: Directors = {
+    firstName: 'Jane',
+    lastName: 'Smith',
+    fullTimeEmployee: true,
+    location: 'London',
+    numberOfReports: 17,
+  };
+
+  console.log(director1);
+
+  // Should print:
+  // Object
+  // firstName: "Jane"*
+  // fullTimeEmployee: true
+  // lastName: "Smith"
+  // location: "London"
+  // numberOfReports: 17
   
