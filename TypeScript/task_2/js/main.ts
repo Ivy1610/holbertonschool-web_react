@@ -65,6 +65,17 @@ function executeWork(employee: Director | Teacher): void {
     }
 }
 
+// Define a String Literal Type for Subjects
+type Subjects = "Math" | "History";
+
+// Function to return a teaching message based on the subject
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  }
+  return "Teaching History";
+}
+
 // Test cases
-executeWork(createEmployee(200));  // Output: Getting to work
-executeWork(createEmployee(1000)); // Output: Getting to director tasks
+console.log(teachClass("Math"));    // Output: Teaching Math
+console.log(teachClass("History")); // Output: Teaching History
